@@ -68,7 +68,7 @@ const Table = ({Users, setUsers}) => {
                   <button onClick={() => toggleDialogUpdate("open", user.id)} className={"btn btn-primary btn-sm flex"}>
                     <SquarePen className={"h-8"} />
                   </button>
-                  <div id={"content_dialogUpdate" + user.id} className={"hidden justify-center z-10 items-center fixed bottom-0 top-0 right-0 left-0 bg-black/70 p-2 rounded-lg"}>
+                  <div id={"content_dialogUpdate" + user.id} className={"overflow-y-scroll hidden justify-center z-10 items-center fixed bottom-0 top-0 right-0 left-0 bg-black/70 p-2 rounded-lg"}>
                     <div className={"card relative w-96 bg-base-100 shadow-sm"}>
                       <div className="card-body">
                         <h3 className="font-bold text-lg mb-4">Modifier Un Utilisateur</h3>
@@ -196,8 +196,8 @@ function App() {
       <div className={"flex justify-between w-full max-w-3xl"}>
         <h1 className={"text-2xl font-bold"}>Users Lists</h1>
         <button className={"btn btn-sm btn-primary"} onClick={() => toggleDialog("open")}>Add User</button>
-        <div id="content_dialog" className={"hidden justify-center z-10 items-center fixed bottom-0 top-0 right-0 left-0 bg-black/70 p-2 rounded-lg"}>
-          <div className={"card w-96 bg-base-100 overflow-y-scroll shadow-sm"}>
+        <div id="content_dialog" className={"hidden overflow-y-scroll justify-center z-10 items-center fixed bottom-0 top-0 right-0 left-0 bg-black/70 p-2 rounded-lg"}>
+          <div className={"card w-96 bg-base-100 shadow-sm"}>
             <div className="card-body">
               <h3 className="font-bold text-lg mb-4">Add New User</h3>
               <form onSubmit={(e) => handelSubmit(e)} className={"grid sm:grid-cols-2 gap-4 "}>
